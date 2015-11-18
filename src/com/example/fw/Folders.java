@@ -14,7 +14,11 @@ public Folders withAdded(String folder) {
     newList.storedFolders.add(folder);
     return newList;
   }
-
+public Folders without(int index) {
+	 Folders newList=new Folders(storedFolders);
+	    newList.storedFolders.remove(index);
+	    return newList;
+}
 @Override
 public int hashCode() {
 	final int prime = 31;
@@ -42,6 +46,7 @@ public boolean equals(Object obj) {
 public String toString() {
 	return "Folders [" + storedFolders + "]";
 }
+
 
 
 
